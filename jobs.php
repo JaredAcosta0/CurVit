@@ -42,24 +42,24 @@ $projects = [
             $project1
 ];
 
-$prx = new proprojects();
-$prx -> setProject('Proyecto X');
-$prx -> description = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book';
-$prx -> img = 'html-5.jpg';
+$pr1 = new proprojects();
+$pr1 -> setProject('Proyecto X');
+$pr1 -> description = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book';
+$pr1 -> img = 'html-5.jpg';
 
-$proyectoXI = new proprojects();
-$proyectoXI -> setProject('Proyecto XI');
-$proyectoXI -> description = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book';
-$proyectoXI -> img = 'php.png';
+$pr2 = new proprojects();
+$pr2 -> setProject('Proyecto XI');
+$pr2 -> description = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book';
+$pr2 -> img = 'php.png';
 
-$proyectoXII = new proprojects();
-$proyectoXII -> setProject('Proyecto XII');
-$proyectoXII -> description = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book';
-$proyectoXII -> img = 'c.png';
+$pr3 = new proprojects();
+$pr3 -> setProject('Proyecto XII');
+$pr3 -> description = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book';
+$pr3 -> img = 'c.png';
 $proyectos = [
-    $prx,
-    $proyectoXI,
-    $proyectoXII
+    $pr1,
+    $pr2,
+    $pr3
 ];
 
     function Myfunction($dato){
