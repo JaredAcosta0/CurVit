@@ -12,5 +12,4 @@ class Projects{
     public function getProject(){
         return $this->proyecto;
     }
-
 }
