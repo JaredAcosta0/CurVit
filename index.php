@@ -1,13 +1,35 @@
-<?php 
+<?php
+    require_once 'vendor/autoload.php';
+
+    use Illuminate\Database\Capsule\Manager as Capsule;
+    use App\Models\Project;
+
+    $capsule = new Capsule;
     
+    $capsule->addConnection([
+        'driver'    => 'mysql',
+        'host'      => '127.0.0.1:3306',
+        'database'  => 'curvit',
+        'username'  => 'root',
+        'password'  => 'root',
+        'charset'   => 'utf8',
+        'collation' => 'utf8_unicode_ci',
+        'prefix'    => '',
+    ]);
+
+    // Make this Capsule instance available globally via static methods... (optional)
+    $capsule->setAsGlobal();
+
+    // Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
+    $capsule->bootEloquent();
+
     $nombre = "Jared";
     $apellido = 'Acosta';
     $nombreCompleto = $nombre . $apellido;
     $boolean = false;
     //var_dump($nombre);
 
-    require_once('jobs.php');
-
+    include_once 'jobs.php';
 ?>
 
 
@@ -24,12 +46,20 @@
     <title>Document</title>
 </head>
 <body>
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul>
+                <li><a href="formulario.php">Formulario Proyectos</a></li>
+                <li><a href="formularioDos.php">Formulario XP</a></li>
+            </ul>
+        </nav>
+    </section>
 
      <!--////////////// Datos Personales ////////////////////  -->
     <div class="container">
         <div class="row section">
             <div class="col s3 foto">
-                <img src="assets/img/j1.jpg" alt="persona">
+                <img src="..." alt="persona">
             </div>
             <div class="col s7 texto-foto">
                 <h4><?php echo $nombreCompleto ?></h4>
@@ -91,5 +121,7 @@
             ?>
         </div>
     </section>
+
+
 </body>
 </html>

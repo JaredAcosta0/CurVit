@@ -2,7 +2,7 @@
     require_once 'vendor/autoload.php';
 
     use Illuminate\Database\Capsule\Manager as Capsule;
-    use App\Models\Project;
+    use App\Models\Job;
 
     $capsule = new Capsule;
     
@@ -24,10 +24,10 @@
     $capsule->bootEloquent();
 
     if(!empty($_POST)){
-        $project = new Project();
-        $project -> title = $_POST['title'];
-        $project -> description = $_POST['description'];
-        $project -> save();
+        $job = new Job();
+        $job -> title = $_POST['title'];
+        $job -> description = $_POST['description'];
+        $job -> save();
     }
 ?>
 
@@ -40,8 +40,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Formulrio Proyectos</h1>
-    <form action="formulario.php" method="post">
+    <h1>Formulrio Experiencia</h1>
+    <form action="formularioDos.php" method="post">
         <label for="">Title: </label>
         <input type="text" name="title"><br>
         <label for="">Description: </label>
